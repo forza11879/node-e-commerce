@@ -1,0 +1,29 @@
+{
+  "type": "module",
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js -e js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/forza11879/node-e-commerce.git"
+  },
+  "author": "john",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/forza11879/node-e-commerce/issues"
+  },
+  "homepage": "https://github.com/forza11879/node-e-commerce#readme",
+  "dependencies": {
+    "connect-mongodb-session": "^2.4.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "morgan": "^1.10.0"
+  }
+}
