@@ -1,3 +1,3 @@
 export const getList = (req, res) => {
-  res.send('Hi from back-end list!!!!');
+  res.json({ message: 'Hello from back-end' });
 };
