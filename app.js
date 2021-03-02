@@ -13,7 +13,7 @@ import cookieParser from 'cookie-parser';
 // routes
 import { getRoutes } from './routes/index.js';
 //
-dotenv.config({ path: './config/dev.env' });
+dotenv.config({ path: './config/.env' });
 //
 const app = express();
 //
