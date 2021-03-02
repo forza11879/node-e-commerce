@@ -9,7 +9,7 @@ const authCheck = async (req, res, next) => {
     req.user = firebaseUser;
     next();
   } catch (err) {
-    res.status(401).json({
+    res.status(400).json({
       err: 'Invalid or expired token',
     });
   }
