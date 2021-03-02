@@ -1,22 +1,22 @@
 import { User } from './User.js';
 
 const createOrUpdateUser = async ({ name, picture, email }) => {
-  const user = await User.findOneAndUpdate(
-    { email },
-    { name: email.split('@')[0], picture },
-    { new: true }
-  );
+  const query = { email };
+  const update = { name: email.split('@')[0], picture };
+  const options = { new: true };
+
+  const user = await User.findOneAndUpdate(query, update, options);
   if (user) {
     console.log('USER UPDATED', user);
-    res.json(user);
+    return user;
   } else {
-    const newUser = await new User({
+    const newUser = await User.create({
       email,
       name: email.split('@')[0],
       picture,
-    }).save();
+    });
     console.log('USER CREATED', newUser);
-    res.json(newUser);
+    return newUser;
   }
 };
 

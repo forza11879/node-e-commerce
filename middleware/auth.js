@@ -1,6 +1,7 @@
 import admin from '../firebase/index.js';
 
 const authCheck = async (req, res, next) => {
+  console.log(req.headers); // token
   try {
     const firebaseUser = await admin
       .auth()
