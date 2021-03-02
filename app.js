@@ -6,6 +6,9 @@ import morgan from 'morgan';
 import session from 'express-session';
 import storeFabric from 'connect-mongodb-session';
 import cors from 'cors';
+// db
+import { connectDb } from './startup/db.js';
+//
 import cookieParser from 'cookie-parser';
 // routes
 import { getRoutes } from './routes/index.js';
@@ -30,3 +33,5 @@ const server = createServer(app);
 server.listen(port, function () {
   console.log(`Server is up on port ${port}`);
 });
+// once app is ready connect to DB
+connectDb();
