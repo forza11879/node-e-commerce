@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { getListRoutes } from './list.js';
+import { getUserRoutes } from './user.js';
 
 function getRoutes() {
   // All routes in our Node API are placed on this router
@@ -8,7 +8,7 @@ function getRoutes() {
 
   // router.use() prefixes our route (i.e. /api/v1/auth)
 
-  router.use('/list', getListRoutes());
+  router.use('/user', getUserRoutes());
 
   return router;
 }
